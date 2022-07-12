@@ -26,4 +26,4 @@ class World:
 
         for i in range(int(world_width/10)):
             pass
-
+        #TODO make world generation by accessing window.
