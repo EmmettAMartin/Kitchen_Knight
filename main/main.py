@@ -17,41 +17,24 @@ import tkinter as tk
 import random as rand
 import time as ti
 
-class Window:
 
-    #Assign window properties.
-    def __init__(self, height, width):
-        self.height = height
-        self.width = width
-    
-    def destroy_window(self):
-        global new_window
-        new_window.destroy()
+print("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^")
+print("^^^^^^^^^^^^^^^^^^^^^ Main Program Start! ^^^^^^^^^^^^^^^^^^^^^")
+print("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^")
 
-    #Initialize window.
-    def initialize_window(self):
-        #Create window.
-        global new_window
-        new_window = tk.Tk()
 
-        #Create string for geometry
-        geometry_string = str(self.width)+"x"+str(self.height)
+new_window = tk.Tk()
 
-        #Insert variable "geometry_string" into ".geometry" function to resize window.
-        new_window.geometry(geometry_string)
+def kill_window(window_name):
+    window_name.destroy()
 
-        #LET IT LIVE!!!!!!!!!
-        new_window.mainloop()
+def key_pressed(event):
 
-class World:
+    key = str.lower(event.char)
 
-    def __init__(self, world_width, world_height):
-        self.world_width = world_width
-        self.world_height = world_height
+    if key == chr(27):
+        kill_window(new_window)
 
-    def generate_world(self, world_width, world_height):
-        obstacle_list_x = []
+new_window.bind("<Key>", key_pressed)
 
-        for i in range(int(world_width/10)):
-            pass
-        #TODO make world generation by accessing window.
+new_window.mainloop()
