@@ -4,9 +4,11 @@
 Emmett, Doran, Ty, Eliot.
 Made July 10th, author: Emmett of Hats Off Studios.
 
+With help from de333r.
+
 ---------------------------------------------------
 
-Window Class.
+Main file.
 
 """
 
@@ -15,7 +17,6 @@ import tkinter as tk
 import random as rand
 import time as ti
 
-#Create class for window.
 class Window:
 
     #Assign window properties.
@@ -23,9 +24,14 @@ class Window:
         self.height = height
         self.width = width
     
+    def destroy_window(self):
+        global new_window
+        new_window.destroy()
+
     #Initialize window.
     def initialize_window(self):
         #Create window.
+        global new_window
         new_window = tk.Tk()
 
         #Create string for geometry
@@ -36,3 +42,16 @@ class Window:
 
         #LET IT LIVE!!!!!!!!!
         new_window.mainloop()
+
+class World:
+
+    def __init__(self, world_width, world_height):
+        self.world_width = world_width
+        self.world_height = world_height
+
+    def generate_world(self, world_width, world_height):
+        obstacle_list_x = []
+
+        for i in range(int(world_width/10)):
+            pass
+        #TODO make world generation by accessing window.
