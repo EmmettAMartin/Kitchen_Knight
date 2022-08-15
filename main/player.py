@@ -10,9 +10,11 @@ With help from de333r.
 
 Player class.
 
+Comments should be in all caps unless referencing names.
+
 """
 
-#Import Libraries.
+#IMPORT LIBRARIES
 import tkinter as tk
 import random as rand
 import time as ti
