@@ -4,8 +4,6 @@
 Emmett, Doran, Ty, Eliot.
 Made July 10th, author: Emmett of Hats Off Studios.
 
-With help from de333r.
-
 ---------------------------------------------------
 
 Player class.
