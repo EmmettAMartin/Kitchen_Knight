@@ -31,10 +31,10 @@ import os
 #messagebox and simpledialog; from tkinter (needs to be imported seperatly.)
 from tkinter import messagebox, simpledialog
 
-
-print("********************")
-print("*Main Program Start*")
-print("********************")
+def print_beginning_text():
+    print("********************")
+    print("*Main Program Start*")
+    print("********************")
 
 #MAIN WINDOW
 main_window = tk.Tk()
@@ -100,7 +100,8 @@ def key_pressed(event):
 
 #FUNCTION TO RUN GAME
 def run_game():
-    configure_window(main_window, 189, 63, 0, "Game", True)
+    print_beginning_text()
+    configure_window(main_window, 189, 63, 1, "Game", True)
     loading_screen(main_window)
 
 
