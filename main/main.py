@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 
 2022 Hats Off Studios.
@@ -31,6 +32,10 @@ import os
 #messagebox and simpledialog; from tkinter (needs to be imported seperatly.)
 from tkinter import messagebox, simpledialog
 
+
+global background
+
+
 def print_beginning_text():
     print("********************")
     print("*Main Program Start*")
@@ -41,8 +46,19 @@ main_window = tk.Tk()
 
 #LOADING SCREEN
 def loading_screen(window_address):
+    global background
+    global imagelabel
     background = tk.Canvas(width=mod_dimensions_x, height=mod_dimensions_y, bg="#000000", highlightthickness=0)
+
+    HatsOffStudios_logo = tk.PhotoImage(file="images/HatsOff_Studios2.png")
+
+    imagelabel = tk.Label(background,image=HatsOffStudios_logo)
+    imagelabel.image = HatsOffStudios_logo
+
     background.pack()
+    imagelabel.place(x=mod_dimensions_x/2,y=mod_dimensions_y/2)
+
+
 
     
 #CONSTRUCT WINDOW
@@ -101,7 +117,7 @@ def key_pressed(event):
 #FUNCTION TO RUN GAME
 def run_game():
     print_beginning_text()
-    configure_window(main_window, 189, 63, 1, "Game", True)
+    configure_window(main_window, 161, 91, 8, "Game", True)
     loading_screen(main_window)
 
 
