@@ -32,6 +32,10 @@ import os
 #messagebox and simpledialog; from tkinter (needs to be imported seperatly.)
 from tkinter import messagebox, simpledialog
 
+#PIL for images
+import PIL as pil
+
+from PIL import Image
 
 global background
 
@@ -50,13 +54,19 @@ def loading_screen(window_address):
     global imagelabel
     background = tk.Canvas(width=mod_dimensions_x, height=mod_dimensions_y, bg="#000000", highlightthickness=0)
 
+    HOS_logoPIL = Image.open("images/HatsOff_Studios2.png")
+
+    HOS_logoPILwidth = HOS_logoPIL.width
+    HOS_logoPILheight = HOS_logoPIL.height
+
     HatsOffStudios_logo = tk.PhotoImage(file="images/HatsOff_Studios2.png")
 
-    imagelabel = tk.Label(background,image=HatsOffStudios_logo)
+    imagelabel = tk.Label(background,image=HatsOffStudios_logo, anchor="center")
+
     imagelabel.image = HatsOffStudios_logo
 
     background.pack()
-    imagelabel.place(x=mod_dimensions_x/2,y=mod_dimensions_y/2)
+    imagelabel.place(x=(mod_dimensions_x/2)-(HOS_logoPILwidth/2),y=(mod_dimensions_y/2)-(HOS_logoPILheight/2))
 
 
 
