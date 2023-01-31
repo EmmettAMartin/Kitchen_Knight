@@ -12,11 +12,11 @@ Comments should be in all caps unless referencing names.
 
 """
 
-#IMPORT LIBRARIES
+# IMPORT LIBRARIES
 import tkinter as tk
 import random as rand
 import time as ti
-import window as win
+
 
 class Player:
     def __init__(self, curr_x, curr_y, player_y, player_x):
