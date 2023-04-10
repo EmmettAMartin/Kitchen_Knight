@@ -35,8 +35,6 @@ from tkinter import messagebox, simpledialog
 # PIL for images
 # import PIL as pil
 
-import  main_game
-
 from PIL import Image, ImageEnhance, ImageTk
 
 global background
@@ -60,7 +58,7 @@ def loading_screen(window_address):
     background = tk.Canvas(
         width=mod_dimensions_x, height=mod_dimensions_y, bg="#000000", highlightthickness=0)
 
-    hos_logo_pil = Image.open("images/HatsOff_Studios2.png")
+    hos_logo_pil = Image.open("resources/images/HatsOff_Studios2.png")
 
     hos_logo_pil_width = hos_logo_pil.width
     hos_logo_pil_height = hos_logo_pil.height
