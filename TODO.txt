@@ -12,9 +12,10 @@ i: Movement File handles movement on-screen (and off-screen), to be rendered;
 
 i: Collision File tells the Handling File whether or not the Entity/Player can move to the location requested; basically a database.
 
-i: Handling File contains the main game loop. Processes all rendering on-screen, but does not render. Must know locations of all Entities and Player. Handles all keypresses.
+i: Handling File contains the main game loop. Processes all rendering on-screen, but does not render.
+   Must know locations of all Entities and Player. Handles all keypresses taken from the Window File.
 
-i: Renderer/Window File renders all objects on screen. Only recieves data.
+i: Renderer/Window File renders all objects on screen. Only recieves data, with one exception, keypresses.
 
 Handling file takes all inputs from files, and sends appropriate outputs.
 

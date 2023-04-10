@@ -1,5 +1,4 @@
-# import player
-import collision
+import handling
 
 class Mover:
     def __init__(self) -> None:
