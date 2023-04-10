@@ -35,6 +35,8 @@ from tkinter import messagebox, simpledialog
 # PIL for images
 # import PIL as pil
 
+import  main_game
+
 from PIL import Image, ImageEnhance, ImageTk
 
 global background
