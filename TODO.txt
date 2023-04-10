@@ -10,7 +10,7 @@ i: Player File contains data for the other files, including current position. Co
 i: Movement File handles movement on-screen (and off-screen), to be rendered;
    contains move_left, move_right functions that update position of the thing that moves. Also handles Gravity.
 
-i: Collision File tells the Movement File whether or not the Entity/Player can move to the location requested; basically a database.
+i: Collision File tells the Handling File whether or not the Entity/Player can move to the location requested; basically a database.
 
 i: Handling File contains the main game loop. Processes all rendering on-screen, but does not render. Must know locations of all Entities and Player. Handles all keypresses.
 
