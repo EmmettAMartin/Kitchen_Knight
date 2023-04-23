@@ -27,16 +27,17 @@ try:
         except FileNotFoundError:
             pass
         
-        os.system("read -p \"Hit ENTER to begin\"; python3 main.py; read -p \"Hit ENTER to exit\"")
+        os.system("read -p \"Hit ENTER to begin\"; python3 menu.py; read -p \"Hit ENTER to exit\"")
         quit()
 
     if operating_system == "windows":
         try:
+            desktop = os.path.join(os.path.join(os.environ['USERPROFILE']), 'Desktop')
             os.chdir("Desktop\\Kitchen_Knight\\main")
         except FileNotFoundError:
             pass
         
-        os.system("read -p \"Hit ENTER to begin\"; python3 main.py; read -p \"Hit ENTER to exit\"")
+        os.system("read -p \"Hit ENTER to begin\"; python3 menu.py; read -p \"Hit ENTER to exit\"")
         quit()
 
     else:

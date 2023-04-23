@@ -22,7 +22,8 @@ root.title("Game @ " + str(mod_dimensions_x) + "x" + str(mod_dimensions_y))
 
 
 
-
+while True:
+    pass
 
 
 
