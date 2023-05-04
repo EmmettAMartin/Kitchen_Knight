@@ -15,6 +15,8 @@ Comments should be in all caps unless referencing names.
 
 """
 
+print("from menu file")
+
 # IMPORT LIBRARIES
 
 # tkinter
