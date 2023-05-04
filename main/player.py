@@ -1,5 +1,3 @@
-import time
-
 class Player:
 
     sprite_state = "standing"
@@ -17,6 +15,7 @@ class Player:
 
         self.curr_pos_x = self.prev_x
         self.curr_pos_x -= 10
+        Player.stand()
         return self.curr_pos_x
     
     def player_move_right(self):
@@ -24,22 +23,33 @@ class Player:
         Player.sprite_state = "running"
         self.curr_pos_x = self.prev_x
         self.curr_pos_x += 10
+        Player.stand()
         return self.curr_pos_x
     
     def player_jump(self):
+
+        y_list = []
 
         self.curr_pos_y = self.prev_y
         Player.sprite_state = "jumping"
 
         for i in range(30):
             self.curr_pos_y -= 1
-            time.sleep(0.1)
-            return self.curr_pos_y
+            y_list.append(self.curr_pos_y)
 
         for i in range(30):
             self.curr_pos_y += 1
-            time.sleep(0.1)
-            return self.curr_pos_y
+            y_list.append(self.curr_pos_y)
+
+        Player.stand()
+        return y_list
+
     
-    def stand(self):
+    def stand():
         Player.sprite_state = "standing"
+
+if __name__ == "__main__":
+    
+    john = Player(5, 5, 5, 5, 5, 5)
+
+    print(john.player_jump())
