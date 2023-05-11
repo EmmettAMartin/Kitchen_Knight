@@ -48,7 +48,7 @@ def print_beginning_text():
     print("********************")
 
 
-# MAIN WINDOW
+# MAIN WINDOWz
 main_window = tk.Tk()
 
 
